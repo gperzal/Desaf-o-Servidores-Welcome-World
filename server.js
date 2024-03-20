@@ -59,7 +59,7 @@ app.get('/leer', (req, res) => {
 app.get('/renombrar', (req, res) => {
     const { nombre, nuevoNombre } = req.query;
     // fs.rename(path.join(__dirname, nombre + '.txt'), path.join(__dirname, nuevoNombre + '.txt'), (err) => {
-    fs.rename(path.join(filesDir, nombre + '.txt'), path.join(filesDir, nuevoNombre), (err) => {
+    fs.rename(path.join(filesDir, nombre + '.txt'), path.join(filesDir, nuevoNombre + '.txt'), (err) => {
         if (err) {
             return res.send('Error al renombrar el archivo');
         }
